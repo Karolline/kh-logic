@@ -1,6 +1,7 @@
 .outCircle  {
-  width: 800px;
-  height: 300px;
+  width: 100%;
+  height: 30%;
+  /* height: 300px; */
   /* background-color: lightblue; */
 
   position: relative;
@@ -12,34 +13,47 @@
 /* border-radius: 100px; */
 }
 
-.rotateClock {
+.leftCircle {
   width: 100%;
   height: 100%;
-  -webkit-animation: clock 3s 1 linear forwards paused;
+  -webkit-animation: leftCircle 1s 1 linear forwards paused;
 }
 
-.rotateCclock { /* 도는 반경 */
+.rightCircle { /* 도는 반경 */
   width: 100%;
   height: 100%;
-  -webkit-animation: cclock 3s 1 linear forwards paused;
+  -webkit-animation: rightCircle 1s 1 linear forwards paused;
+}
+
+.middleCircle {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: middleCircle 1s 1 linear forwards paused;
 }
 
 .rotate img {
-  width: 150px;
-  height: 150px;
+  width: 50%;
+  /* height: 40%; */
   
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
 }
 
-@-webkit-keyframes cclock {
+@-webkit-keyframes leftCircle {
   0% {-webkit-transform: rotateZ(0deg)}
-  100% {-webkit-transform: rotateZ(-180deg)}
+  /* 100% {-webkit-transform: rotateZ(-180deg) translateX(-50%) translateY(-10%)} */
+  100% {-webkit-transform: translateX(100%) translateY(70%)}
 }
 
-@-webkit-keyframes clock {
-  from {-webkit-transform: rotateZ(0deg)}
-  to {-webkit-transform: rotateZ(180deg)}
+@-webkit-keyframes rightCircle {
+  0% {-webkit-transform: rotateZ(0deg)}
+  /* 100% {-webkit-transform: rotateZ(200deg) translateX(-110%)} */
+  100% {-webkit-transform: translateX(-100%) translateY(70%)}
+}
+
+@-webkit-keyframes middleCircle {
+  from {-webkit-transform: translateY(0deg)}
+  to {-webkit-transform: translateY(150px)}
 }
   
   @font-face {
