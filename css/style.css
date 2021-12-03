@@ -53,7 +53,7 @@
 
 @-webkit-keyframes middleCircle {
   from {-webkit-transform: translateY(0deg)}
-  to {-webkit-transform: translateY(150px)}
+  to {-webkit-transform: translateY(70%)}
 }
   
   @font-face {
