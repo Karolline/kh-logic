@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>Math I do</title>
+        <meta charset="UTF-8">
+       
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="../js/script.js"></script> -->
+    </head>
+</html>
+
+<body>
+    <div class="grid">
+        <div class="content">
+             <h1 style="font-weight: bold;">Math I do on Streets</h1>
+        </div>
+    </div >
+
+    <div class="container">
+        <div class="content-large plates">
+            <img class="plateImg" id="plate01" src="../img/plates/a license plate-01.png">
+            <img class="plateImg" id="plate02" src="../img/plates/a license plate-02.png">
+            <img class="plateImg" id="plate03" src="../img/plates/a license plate-03.png">
+            <img class="plateImg" id="plate04" src="../img/plates/a license plate-04.png">
+            <img class="plateImg" id="plate05" src="../img/plates/a license plate-05.png">
+            <img class="plateImg" id="plate06" src="../img/plates/a license plate-06.png">
+            <img class="plateImg" id="plate07" src="../img/plates/a license plate-07.png">
+            <img class="plateImg" id="plate08" src="../img/plates/a license plate-08.png">
+            <img class="plateImg" id="plate09" src="../img/plates/a license plate-09.png">
+            <img class="plateImg" id="plate10" src="../img/plates/a license plate-10.png">
+            <img class="plateImg" id="plate11" src="../img/plates/a license plate-11.png">
+            <img class="plateImg" id="plate12" src="../img/plates/a license plate-12.png">
+            <img class="plateImg" id="plate13" src="../img/plates/a license plate-13.png">
+            <img class="plateImg" id="plate14" src="../img/plates/a license plate-14.png">
+            <img class="plateImg" id="plate15" src="../img/plates/a license plate-15.png">
+            <img class="plateImg" id="plate17" src="../img/plates/a license plate-17.png">
+        </div>
+    </div>
+
+    <div class="grid" id="algorithmDiv" style="display: none;">
+        <!-- 알고리즘 설명 그림 부분 -->
+        <div class="content-large">
+            <img id="algorithm" src="" style="width: 50%;">
+        </div>
+
+        <!-- 원 부분 -->
+        <div style="width: 70%">
+            <div class="outCircle" style="display: flex; margin: 0 auto;">
+                <div class="rotate leftCircle" id="circle1" style="flex: 1">
+                <img id="leftCircle" src="">
+                </div>
+                <div class="rotate middleCircle" id="circle2" style="flex: 1">
+                <img id="middleCircle" src="" style="border:1px solid #eaeaea">
+                </div>
+                <div class="rotate rightCircle" id="circle3" style="flex: 1">
+                <img id="rightCircle" src="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    var algorithmDic = {
+        'plate01': {
+            'a': '0',
+            'b': '1',
+            'symbol': 'multiple'
+        },
+        'plate02': {
+            'a': '9',
+            'b': '3',
+            'symbol': 'multiple'
+        },
+        'plate03': {
+            'a': '5',
+            'b': '2',
+            'symbol': 'multiple'
+        },
+        'plate04': {
+            'a': '4',
+            'b': '8',
+            'symbol': 'multiple'
+        },
+        'plate05': {
+            'a': '6',
+            'b': '1',
+            'symbol': 'multiple'
+        },
+        'plate06': {
+            'a': '4',
+            'b': '7',
+            'symbol': 'multiple'
+        },
+        'plate07': {
+            'a': '5',
+            'b': '2',
+            'symbol': 'multiple'
+        },
+        'plate08': {
+            'a': '1',
+            'b': '0',
+            'symbol': 'multiple'
+        },
+        'plate09': {
+            'a': '',
+            'b': '',
+            'symbol': ''
+        },
+        'plate10': {
+            'a': '3',
+            'b': '2',
+            'symbol': 'multiple'
+        },
+        'plate11': {
+            'a': '1',
+            'b': '5',
+            'symbol': 'multiple'
+        },
+        'plate12': {
+            'a': '',
+            'b': '',
+            'symbol': ''
+        },
+        'plate13': {
+            'a': '5',
+            'b': '5',
+            'symbol': 'multiple'
+        },
+        'plate14': {
+            'a': '2',
+            'b': '8',
+            'symbol': 'multiple'
+        },
+        'plate15': {
+            'a': '1',
+            'b': '2',
+            'symbol': 'multiple'
+        },
+        'plate16': {
+            'a': '9',
+            'b': '3',
+            'symbol': 'multiple'
+        }
+    }
+
+    $('.plateImg').click(function() {
+        var thisPlate = this.id
+        var algorithmInfo = algorithmDic[thisPlate]
+
+        console.log(algorithmInfo)
+
+        $("#algorithm").fadeOut(400, function() {
+            $("#algorithmDiv").css("display", "block") 
+            $("#algorithm").attr("src", "../img/algorithm/" + thisPlate + ".png") 
+        })
+      .fadeIn(400);
+
+      $("#leftCircle").attr("src", "../img/a/" + algorithmInfo["a"] + ".png")
+      $("#middleCircle").attr("src", "../img/symbol/" + algorithmInfo["symbol"] + ".png")
+      $("#rightCircle").attr("src", "../img/b2/" + algorithmInfo["b"] + ".png")
+
+      $("#middleCircle").css("border", "")
+        $(".rotate").css("-webkit-animation-play-state", "running")    
+      
+    })
+</script>

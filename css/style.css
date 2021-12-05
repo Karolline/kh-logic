@@ -1,3 +1,7 @@
+.plates img {
+  width: 20%;
+}
+
 .outCircle  {
   width: 100%;
   height: 30%;
@@ -16,20 +20,22 @@
 .leftCircle {
   width: 100%;
   height: 100%;
-  -webkit-animation: leftCircle 1s 1 ease-in-out forwards paused;
+  -webkit-animation: leftCircle 3s 1 ease-in-out forwards paused;
 }
 
 .rightCircle { /* 도는 반경 */
   width: 100%;
   height: 100%;
-  -webkit-animation: rightCircle 1s 1 ease-in-out forwards paused;
+  -webkit-animation: rightCircle 3s 1 ease-in-out forwards paused;
 }
 
 .middleCircle {
   width: 100%;
   height: 100%;
-  -webkit-animation: middleCircle 1s 1 ease-in-out forwards paused;
+  -webkit-animation: middleCircle 3s 1 ease-in-out forwards paused;
 }
+
+
 
 .rotate img {
   width: 50%;
@@ -54,6 +60,11 @@
 @-webkit-keyframes middleCircle {
   from {-webkit-transform: translateY(0deg)}
   to {-webkit-transform: translateY(70%)}
+}
+
+@-webkit-keyframes rotateCircle {
+  0% {-webkit-transform: rotateZ(0deg);}
+  100% {-webkit-transform: rotateZ(360deg);}
 }
   
   @font-face {
