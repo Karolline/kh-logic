@@ -10,7 +10,7 @@
     </head>
 </html>
 
-<body>
+<body style="background-color: #F7F2EB;">
     <div class="grid">
         <div class="content">
              <h1 style="font-weight: bold;">Math I do on Streets</h1>
@@ -18,7 +18,7 @@
     </div >
 
     <div class="container">
-        <div class="content-large plates">
+        <div class="text-left_container plates">
             <img class="plateImg" id="plate01" src="../img/plates/a license plate-01.png">
             <img class="plateImg" id="plate02" src="../img/plates/a license plate-02.png">
             <img class="plateImg" id="plate03" src="../img/plates/a license plate-03.png">
@@ -36,25 +36,28 @@
             <img class="plateImg" id="plate15" src="../img/plates/a license plate-15.png">
             <img class="plateImg" id="plate17" src="../img/plates/a license plate-17.png">
         </div>
+
+        <!-- 알고리즘 설명 그림 부분 -->
+        <div class="text-right_container">
+            <div id="algorithmDiv" style="display: none;">
+                <img id="algorithm" src="">
+            </div>
+        </div>
     </div>
 
-    <div class="grid" id="algorithmDiv" style="display: none;">
-        <!-- 알고리즘 설명 그림 부분 -->
-        <div class="content-large">
-            <img id="algorithm" src="" style="width: 50%;">
-        </div>
+    <div class="grid" id="circleDiv"> 
 
         <!-- 원 부분 -->
-        <div style="width: 70%">
-            <div class="outCircle" style="display: flex; margin: 0 auto;">
+        <div style="width: 70%;">
+            <div class="outCircle">
                 <div class="rotate leftCircle" id="circle1" style="flex: 1">
-                <img id="leftCircle" src="">
+                <img id="leftCircle" src="" class="rotateCircle">
                 </div>
                 <div class="rotate middleCircle" id="circle2" style="flex: 1">
-                <img id="middleCircle" src="" style="border:1px solid #eaeaea">
+                <img id="middleCircle" src="" class="rotateCircle">
                 </div>
                 <div class="rotate rightCircle" id="circle3" style="flex: 1">
-                <img id="rightCircle" src="">
+                <img id="rightCircle" src="" class="rotateCircle">
                 </div>
             </div>
         </div>
@@ -152,18 +155,28 @@
 
         console.log(algorithmInfo)
 
+        // 숨겨두었던 algorithmDiv와 circleDiv를 보이게 한다
         $("#algorithm").fadeOut(400, function() {
             $("#algorithmDiv").css("display", "block") 
+            $("#circleDiv").css("display", "block") 
             $("#algorithm").attr("src", "../img/algorithm/" + thisPlate + ".png") 
         })
       .fadeIn(400);
 
+     // 3개 원 이미지를 불러온다
       $("#leftCircle").attr("src", "../img/a/" + algorithmInfo["a"] + ".png")
       $("#middleCircle").attr("src", "../img/symbol/" + algorithmInfo["symbol"] + ".png")
       $("#rightCircle").attr("src", "../img/b2/" + algorithmInfo["b"] + ".png")
 
-      $("#middleCircle").css("border", "")
-        $(".rotate").css("-webkit-animation-play-state", "running")    
+     // 원이 합쳐지게 한다
+      $(".rotate").css("-webkit-animation-play-state", "running")    
+
+      setTimeout(function() {
+          
+        $(".rotateCircle").css("-webkit-animation-play-state", "running")
+      },3000)
+
+      
       
     })
 </script>

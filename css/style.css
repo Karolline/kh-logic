@@ -1,3 +1,12 @@
+#algorithmDiv {
+  display: none;
+  width: 50%;
+}
+
+#circleDiv {
+  display: none;
+}
+
 .plates img {
   width: 20%;
 }
@@ -5,16 +14,11 @@
 .outCircle  {
   width: 100%;
   height: 30%;
-  /* height: 300px; */
-  /* background-color: lightblue; */
-
   position: relative;
-  /* left: 270px;
-  position: absolute;
-  top: 50px; */
-/* -moz-border-radius: 100px; 브라우저 지원 /*
-/* -webkit-border-radius: 100px; 브라우저 지원 */
-/* border-radius: 100px; */
+
+  display: flex; 
+
+  
 }
 
 .leftCircle {
@@ -35,14 +39,30 @@
   -webkit-animation: middleCircle 3s 1 ease-in-out forwards paused;
 }
 
+.rotateCircle {
+  -webkit-animation: rotateCircle 8s infinite ease-in-out forwards paused;
+  /* -webkit-animation: expandCircle 3s 1 ease-in-out forwards paused; */
 
+  /* animation-name: rotateCircle, expandCircle;
+  animation-delay: 8s, 3s;
+  animation-iteration-count: infinite, 1;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-fill-mode: forwards, forwards;
+  animation-play-state: paused, paused; */
+
+  /* -webkit-animation-name: rotateCircle;
+  -webkit-animation-delay: 8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: running; */
+}
 
 .rotate img {
   width: 50%;
-  /* height: 40%; */
-  
   position: absolute;
-  /* bottom: 0; */
+
+  
 }
 
 @-webkit-keyframes leftCircle {
@@ -58,16 +78,21 @@
 }
 
 @-webkit-keyframes middleCircle {
-  from {-webkit-transform: translateY(0deg)}
-  to {-webkit-transform: translateY(70%)}
+  0% {-webkit-transform: translateY(0deg)}
+  100% {-webkit-transform: translateY(70%)}
 }
 
 @-webkit-keyframes rotateCircle {
   0% {-webkit-transform: rotateZ(0deg);}
   100% {-webkit-transform: rotateZ(360deg);}
 }
+
+@-webkit-keyframes expandCircle {
+  0% {-webkit-transform: scale(1);}
+  100% {-webkit-transform: scale(5);}
+}
   
-  @font-face {
+  /* @font-face {
     font-family: 'SuisseIntl';
     src: url('../font/SuisseIntl-Regular.otf') format('opentype'), 
          url('../font/SuisseIntl-Regular-WebXL.woff') format('woff'), 
@@ -75,7 +100,7 @@
          url('../font/SuisseIntl-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+  } */
 
 
 @font-face { font-family:'SuisseIntl Medium';
@@ -149,7 +174,6 @@ opacity: 1;
   float:left;
   z-index: 100;
   margin-left: 2%;  
-
 }
 
 .header-li {
@@ -1082,9 +1106,24 @@ overflow:hidden;
 
 }
 
+.content-right {
+  width:48.5%;
+  margin-right: 5%;
+  float:right;
+  margin-bottom: 10%;
+padding-top: 0%;
+}
+
+.content-left {
+  margin-left: 5%;
+  width:4.5%;
+  float:left;
+  margin-bottom: 0%;
+  padding-top: 0%;
+}
 
 .text-right_container {
-  width:48.5%;
+  width:40%;
   margin-right: 0%;
   float:right;
   margin-bottom: 10%;
@@ -1093,17 +1132,16 @@ padding-top: 0%;
 
 
 .text-left_container {
-  margin-left: 0%;
-  width:48.5%;
+  margin-left: 5%;
+  width:55%;
   float:left;
   margin-bottom: 0%;
   padding-top: 0%;
-
 }
 
 .textright_container {
-  width:48%;
-  margin-right: 4%;
+  width:5%;
+  margin-right: 0%;
   float:left;
   margin-bottom: 0%;
 padding-top: 0%;
