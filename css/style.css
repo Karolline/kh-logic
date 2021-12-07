@@ -58,28 +58,30 @@
   -webkit-animation-play-state: running; */
 }
 
-.rotate img {
-  width: 50%;
-  position: absolute;
+.rotate {
+  /* text-align: center; */
+}
 
-  
+.rotate img {
+  width: 80%;
+  position: absolute;  
 }
 
 @-webkit-keyframes leftCircle {
   0% {-webkit-transform: rotateZ(0deg)}
   /* 100% {-webkit-transform: rotateZ(-180deg) translateX(-50%) translateY(-10%)} */
-  100% {-webkit-transform: translateX(100%) translateY(70%)}
+  100% {-webkit-transform: translateX(100%)}
 }
 
 @-webkit-keyframes rightCircle {
   0% {-webkit-transform: rotateZ(0deg)}
   /* 100% {-webkit-transform: rotateZ(200deg) translateX(-110%)} */
-  100% {-webkit-transform: translateX(-100%) translateY(70%)}
+  100% {-webkit-transform: translateX(-100%)}
 }
 
 @-webkit-keyframes middleCircle {
-  0% {-webkit-transform: translateY(0deg)}
-  100% {-webkit-transform: translateY(70%)}
+  0% {-webkit-transform: translateY(0%)}
+  100% {-webkit-transform: translateY(0%)}
 }
 
 @-webkit-keyframes rotateCircle {
