@@ -39,23 +39,12 @@
   -webkit-animation: middleCircle 3s 1 ease-in-out forwards paused;
 }
 
-.rotateCircle {
-  -webkit-animation: rotateCircle 8s infinite ease-in-out forwards paused;
-  /* -webkit-animation: expandCircle 3s 1 ease-in-out forwards paused; */
+.rotateCircleLeft {
+  -webkit-animation: rotateCircleLeft 8s infinite forwards paused;
+}
 
-  /* animation-name: rotateCircle, expandCircle;
-  animation-delay: 8s, 3s;
-  animation-iteration-count: infinite, 1;
-  animation-timing-function: ease-in-out, ease-in-out;
-  animation-fill-mode: forwards, forwards;
-  animation-play-state: paused, paused; */
-
-  /* -webkit-animation-name: rotateCircle;
-  -webkit-animation-delay: 8s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-play-state: running; */
+.rotateCircleRight {
+  -webkit-animation: rotateCircleRight 8s infinite forwards paused;
 }
 
 .rotate {
@@ -84,9 +73,14 @@
   100% {-webkit-transform: translateY(0%)}
 }
 
-@-webkit-keyframes rotateCircle {
+@-webkit-keyframes rotateCircleLeft {
   0% {-webkit-transform: rotateZ(0deg);}
   100% {-webkit-transform: rotateZ(360deg);}
+}
+
+@-webkit-keyframes rotateCircleRight {
+  0% {-webkit-transform: rotateZ(0deg);}
+  100% {-webkit-transform: rotateZ(-360deg);}
 }
 
 @-webkit-keyframes expandCircle {

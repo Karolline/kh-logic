@@ -50,13 +50,13 @@
         <div class="text-left_container" style="width: 40%; margin-top: 4%">
             <div class="outCircle">
                 <div class="rotate leftCircle" id="circle1" style="flex: 1">
-                <img id="leftCircle1" src="" class="rotateCircle">
+                <img id="leftCircle1" src="" class="rotateCircleLeft">
                 </div>
                 <div class="rotate middleCircle" id="circle2" style="flex: 1">
-                <img id="middleCircle1" src="" class="rotateCircle">
+                <img id="middleCircle1" src="" class="rotateCircleLeft">
                 </div>
                 <div class="rotate rightCircle" id="circle3" style="flex: 1">
-                <img id="rightCircle1" src="" class="rotateCircle">
+                <img id="rightCircle1" src="" class="rotateCircleLeft">
                 </div>
             </div>
         </div>
@@ -65,13 +65,13 @@
         <div class="text-right_container" style="width: 40%;">
             <div class="outCircle">
                 <div class="rotate leftCircle" id="circle4" style="flex: 1">
-                <img id="leftCircle2" src="" class="rotateCircle">
+                <img id="leftCircle2" src="" class="rotateCircleRight">
                 </div>
                 <div class="rotate middleCircle" id="circle5" style="flex: 1">
-                <img id="middleCircle2" src="" class="rotateCircle">
+                <img id="middleCircle2" src="" class="rotateCircleRight">
                 </div>
                 <div class="rotate rightCircle" id="circle6" style="flex: 1">
-                <img id="rightCircle2" src="" class="rotateCircle">
+                <img id="rightCircle2" src="" class="rotateCircleRight">
                 </div>
             </div>
         </div>
@@ -262,7 +262,8 @@
 
       setTimeout(function() {
           
-        $(".rotateCircle").css("-webkit-animation-play-state", "running")
+        $(".rotateCircleLeft").css("-webkit-animation-play-state", "running")
+        $(".rotateCircleRight").css("-webkit-animation-play-state", "running")
       },3000)
 
       
