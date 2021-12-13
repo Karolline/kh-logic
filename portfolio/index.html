@@ -23,7 +23,6 @@
             <img class="plateImg" id="plate02" src="../img/plates/a license plate-02.png">
             <img class="plateImg" id="plate03" src="../img/plates/a license plate-03.png">
             <img class="plateImg" id="plate04" src="../img/plates/a license plate-04.png">
-            <img class="plateImg" id="plate05" src="../img/plates/a license plate-05.png">
             <img class="plateImg" id="plate06" src="../img/plates/a license plate-06.png">
             <img class="plateImg" id="plate07" src="../img/plates/a license plate-07.png">
             <img class="plateImg" id="plate08" src="../img/plates/a license plate-08.png">
@@ -45,115 +44,200 @@
         </div>
     </div>
 
-    <div class="grid" id="circleDiv"> 
+    <div class="container" id="circleDiv"> 
 
-        <!-- 원 부분 -->
-        <div style="width: 100%;">
+        <!-- 왼쪽 원 부분 -->
+        <div class="text-left_container" style="width: 40%; margin-top: 4%">
             <div class="outCircle">
                 <div class="rotate leftCircle" id="circle1" style="flex: 1">
-                <img id="leftCircle" src="" class="rotateCircle">
+                <img id="leftCircle1" src="" class="rotateCircle">
                 </div>
                 <div class="rotate middleCircle" id="circle2" style="flex: 1">
-                <img id="middleCircle" src="" class="rotateCircle">
+                <img id="middleCircle1" src="" class="rotateCircle">
                 </div>
                 <div class="rotate rightCircle" id="circle3" style="flex: 1">
-                <img id="rightCircle" src="" class="rotateCircle">
+                <img id="rightCircle1" src="" class="rotateCircle">
                 </div>
             </div>
         </div>
+
+        <!-- 오른쪽 원 부분 -->
+        <div class="text-right_container" style="width: 40%;">
+            <div class="outCircle">
+                <div class="rotate leftCircle" id="circle4" style="flex: 1">
+                <img id="leftCircle2" src="" class="rotateCircle">
+                </div>
+                <div class="rotate middleCircle" id="circle5" style="flex: 1">
+                <img id="middleCircle2" src="" class="rotateCircle">
+                </div>
+                <div class="rotate rightCircle" id="circle6" style="flex: 1">
+                <img id="rightCircle2" src="" class="rotateCircle">
+                </div>
+            </div>
+        </div>
+
     </div>
     
 </body>
 
 <script>
-    var algorithmDic = {
-        'plate01': {
-            'a': '0',
-            'b': '1',
-            'symbol': 'multiple'
+    var algorithmDictLeft =  {
+        "plate01": {
+            "a": "0",
+            "b": "1",
+            "symbol": "multiple"
         },
-        'plate02': {
-            'a': '9',
-            'b': '3',
-            'symbol': 'multiple'
+        "plate02": {
+            "a": "3",
+            "b": "6",
+            "symbol": "plus"
         },
-        'plate03': {
-            'a': '5',
-            'b': '2',
-            'symbol': 'multiple'
+        "plate03": {
+            "a": "5",
+            "b": "2",
+            "symbol": "plus"
         },
-        'plate04': {
-            'a': '4',
-            'b': '8',
-            'symbol': 'multiple'
+        "plate04": {
+            "a": "4",
+            "b": "4",
+            "symbol": "plus"
         },
-        'plate05': {
-            'a': '6',
-            'b': '1',
-            'symbol': 'multiple'
-        },
-        'plate06': {
-            'a': '4',
-            'b': '7',
-            'symbol': 'multiple'
-        },
-        'plate07': {
-            'a': '5',
-            'b': '2',
-            'symbol': 'multiple'
-        },
-        'plate08': {
-            'a': '1',
-            'b': '0',
-            'symbol': 'multiple'
-        },
-        'plate09': {
-            'a': '',
-            'b': '',
-            'symbol': ''
-        },
-        'plate10': {
-            'a': '3',
-            'b': '2',
-            'symbol': 'multiple'
-        },
-        'plate11': {
-            'a': '1',
-            'b': '5',
-            'symbol': 'multiple'
-        },
-        'plate12': {
-            'a': '',
-            'b': '',
-            'symbol': ''
-        },
-        'plate13': {
-            'a': '5',
-            'b': '5',
-            'symbol': 'multiple'
-        },
-        'plate14': {
-            'a': '2',
-            'b': '8',
-            'symbol': 'multiple'
-        },
-        'plate15': {
-            'a': '1',
-            'b': '2',
-            'symbol': 'multiple'
-        },
-        'plate16': {
-            'a': '9',
-            'b': '3',
-            'symbol': 'multiple'
+        "plate06": {
+            "a": "4",
+            "b": "7",
+            "symbol": "subtract" 
+        }, 
+        "plate07": { 
+            "a": "5", 
+            "b": "2", 
+            "symbol": "plus" 
+        }, 
+        "plate08": { 
+            "a": "7", 
+            "b": "6",
+            "symbol": "subtract" 
+        }
+    ,"plate09": { 
+            "a": "3", 
+            "b": "6",
+            "symbol": "plus" 
+        }, 
+        "plate10": { 
+            "a": "3", 
+            "b": "2",
+            "symbol": "plus" 
+        }, 
+        "plate11": { 
+            "a": "1", 
+            "b": "0",
+            "symbol": "plus" 
+        }, 
+        "plate12": { 
+            "a": "1", 
+            "b": "4",
+            "symbol": "plus" 
+        }, 
+        "plate13": { 
+            "a": "3", 
+            "b": "2",
+            "symbol": "plus" 
+        }, 
+        "plate14": { 
+            "a": "7", 
+            "b": "4",
+            "symbol": "multiple" 
+        }, 
+        "plate16": { 
+            "a": "2", 
+            "b": "4",
+            "symbol": "plus" 
+        }, 
+        "plate17": { 
+            "a": "9", 
+            "b": "3",
+            "symbol": "subtract" 
+        }
+    }
+
+    var algorithmDictRight = {
+        "plate01": { 
+            "a": "4", 
+            "b": "5", 
+            "symbol": "plus" 
+        }, 
+        "plate02": { 
+            "a": "3", 
+            "b": "3", 
+            "symbol": "multiple" 
+        }, 
+        "plate03": { 
+            "a": "1", 
+            "b": "5", 
+            "symbol": "plus" 
+        }, 
+        "plate04": { 
+            "a": "9", 
+            "b": "3", 
+            "symbol": "divition" 
+        }, 
+        "plate06": { 
+            "a": "8", 
+            "b": "0",
+            "symbol": "plus" 
+        },  
+        "plate07": {  
+            "a": "1",  
+            "b": "5", 
+            "symbol": "plus" 
+        },  
+        "plate08": {  
+            "a": "0",  
+            "b": "0",
+            "symbol": "multiple" 
+        }
+      ,"plate09": {  
+            "a": "1",  
+            "b": "1", 
+            "symbol": "plus" 
+        },  
+        "plate10": {  
+            "a": "0",  
+            "b": "5", 
+            "symbol": "multiple"  
+        },  
+        "plate11": {  
+            "a": "7",  
+            "b": "2", 
+            "symbol": "subtract"  
+        },  
+        "plate12": {  
+            "a": "1",  
+            "b": "6", 
+            "symbol": "plus"  
+        },  
+        "plate13": {  
+            "a": "4",  
+            "b": "1", 
+            "symbol": "plus"  
+        },  
+        "plate16": {  
+            "a": "0",  
+            "b": "6", 
+            "symbol": "plus"  
+        },  
+        "plate17": {  
+            "a": "9",  
+            "b": "3", 
+            "symbol": "divition"  
         }
     }
 
     $('.plateImg').click(function() {
         var thisPlate = this.id
-        var algorithmInfo = algorithmDic[thisPlate]
+        var algorithmInfoLeft = algorithmDictLeft[thisPlate]
+        var algorithmInfoRight = algorithmDictRight[thisPlate]
 
-        console.log(algorithmInfo)
+        console.log(algorithmInfoLeft, algorithmInfoRight)
 
         // 숨겨두었던 algorithmDiv와 circleDiv를 보이게 한다
         $("#algorithm").fadeOut(400, function() {
@@ -163,10 +247,15 @@
         })
       .fadeIn(400);
 
-     // 3개 원 이미지를 불러온다
-      $("#leftCircle").attr("src", "../img/a/" + algorithmInfo["a"] + ".png")
-      $("#middleCircle").attr("src", "../img/symbol/" + algorithmInfo["symbol"] + ".png")
-      $("#rightCircle").attr("src", "../img/b2/" + algorithmInfo["b"] + ".png")
+     // 왼쪽 3개 원 이미지를 불러온다
+      $("#leftCircle1").attr("src", "../img/a/" + algorithmInfoLeft["a"] + ".png")
+      $("#middleCircle1").attr("src", "../img/symbol/" + algorithmInfoLeft["symbol"] + ".png")
+      $("#rightCircle1").attr("src", "../img/b2/" + algorithmInfoLeft["b"] + ".png")
+
+      // 오른쪽 3개 원 이미지를 불러온다
+      $("#leftCircle2").attr("src", "../img/a/" + algorithmInfoRight["a"] + ".png")
+      $("#middleCircle2").attr("src", "../img/symbol/" + algorithmInfoRight["symbol"] + ".png")
+      $("#rightCircle2").attr("src", "../img/b2/" + algorithmInfoRight["b"] + ".png")
 
      // 원이 합쳐지게 한다
       $(".rotate").css("-webkit-animation-play-state", "running")    
