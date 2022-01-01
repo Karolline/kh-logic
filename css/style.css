@@ -39,6 +39,10 @@
   -webkit-animation: middleCircle 3s 1 ease-in-out forwards paused;
 }
 
+.spanScale {
+  -webkit-animation: spanScale 3s 1 forwards paused;
+}
+
 .rotateCircleLeft {
   -webkit-animation: rotateCircleLeft 8s infinite forwards paused;
 }
@@ -71,6 +75,11 @@
 @-webkit-keyframes middleCircle {
   0% {-webkit-transform: translateY(0%)}
   100% {-webkit-transform: translateY(0%)}
+}
+
+@-webkit-keyframes spanScale {
+  0% {}
+  100% {-webkit-transform: scale(2.3);}
 }
 
 @-webkit-keyframes rotateCircleLeft {
