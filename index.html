@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <button id="btnSelect">선택</button>
+        <button id="btnRotate">돌기</button>
+
+       <div style="width: 70%">
+            <div class="outCircle" style="display: flex; margin: 0 auto;">
+                <div class="rotate leftCircle" id="circle1" style="flex: 1">
+                <img id="leftCircle" src="../img/TEST_PNG-20.png">
+                </div>
+                <div class="rotate middleCircle" id="circle2" style="flex: 1">
+                <img id="middleCircle" src="../img/TEST_PNG-20.png">
+                </div>
+                <div class="rotate rightCircle" id="circle3" style="flex: 1">
+                <img id="rightCircle" src="../img/TEST_PNG-20.png">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<script>
+$('#btnSelect').click(function() {
+    $("#leftCircle").fadeOut(400, function() {
+    $("#leftCircle").attr("src", "../img/circle1.png") 
+    })
+    .fadeIn(400);
+
+    $("#rightCircle").fadeOut(400, function() {
+    $("#rightCircle").attr("src", "../img/circle2.png")
+    })
+    .fadeIn(400);
+    
+    
+})
+
+$('#btnRotate').click(function() {
+    $(".rotate").css("-webkit-animation-play-state", "running")
+})
+    
+
+</script>
