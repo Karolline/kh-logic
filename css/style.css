@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../font/NotoSansCJKkr-Regular.otf') format('truetype');
+}
+
 #algorithmDiv {
   display: none;
   width: 50%;
